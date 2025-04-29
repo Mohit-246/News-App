@@ -1,27 +1,83 @@
-.landing-header {
+.landing {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f4f6f8;
+    color: #333;
+    padding: 2%;
+  }
+  
+  .landing-header {
+    display: flex;
     justify-content: space-between;
-}
-
-.flex {
+    align-items: center;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .logo {
     display: flex;
     align-items: center;
-}
-
-.landing-btns button {
-    background: none;
+    gap: 0.5rem;
+  }
+  
+  nav button {
+    margin-left: 1rem;
+    padding: 0.5rem 1rem;
     border: none;
+    background-color: #1976d2;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
     cursor: pointer;
-    font-weight: 700;
-}
-
-.article-container {
-   display: grid;
-   grid-template-columns: repeat(3, 1fr);
-}
-
-.news-card {
-    width: 350px;
-    padding: 3%;
-    margin: 4%;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
+  }
+  
+  nav button:hover {
+    background-color: #125ca1;
+  }
+  
+  .top-news h2 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .articles {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .news-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .news-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .news-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  
+  .news-card h3 {
+    margin: 1rem;
+    font-size: 1.1rem;
+  }
+  
+  .news-card p {
+    margin: 0 1rem 1rem;
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  .news-card a {
+    display: block;
+    margin: 0 1rem 1rem;
+    text-decoration: none;
+    color: #1976d2;
+    font-weight: bold;
+  }
