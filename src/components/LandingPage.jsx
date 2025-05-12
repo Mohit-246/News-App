@@ -6,7 +6,7 @@ function LandingPage() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch('https://newsapi.org/v2/top-headlines?country=us&apiKey=7e8b91d76c3a4b8588d5d34ca1b4f5d2')
+    fetch('https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=7e8b91d76c3a4b8588d5d34ca1b4f5d2')
       .then(response => response.json())
       .then(data => setArticles(data.articles))
       .catch(error => console.error("Error in fetching news", error));
@@ -34,7 +34,7 @@ function LandingPage() {
               <img src={article.urlToImage} alt={article.title} />
               <h3>{article.title}</h3>
               <p>{article.description}</p>
-              <a href={article.url} target="_blank">Read more</a>
+              <a href={article.url} target="_blank" rel="noopener noreferrer">Read more</a>
             </div>
           ))}
         </div>
