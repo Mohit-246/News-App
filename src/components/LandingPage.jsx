@@ -6,9 +6,12 @@ function LandingPage() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch('https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=7e8b91d76c3a4b8588d5d34ca1b4f5d2')
+    fetch('https://newsdata.io/api/1/news?apikey=pub_864869fc549ab288d8d2099c0d898b6018023&q=India ')
       .then(response => response.json())
-      .then(data => setArticles(data.articles))
+      .then(data => {
+        console.log(data.results)
+        setArticles(data.results)
+        })
       .catch(error => console.error("Error in fetching news", error));
   }, []);
 
@@ -31,10 +34,10 @@ function LandingPage() {
         <div className="articles">
           {articles.map((article, id) => (
             <div className="news-card" key={id}>
-              <img src={article.urlToImage} alt={article.title} />
+              <img src={article.source_icon} alt={article.title} />
               <h3>{article.title}</h3>
               <p>{article.description}</p>
-              <a href={article.url} target="_blank" rel="noopener noreferrer">Read more</a>
+              <a href={article.link} target="_blank" rel="noopener noreferrer">Read more</a>
             </div>
           ))}
         </div>
