@@ -17,3 +17,23 @@ If you are developing a production application, we recommend using TypeScript wi
 3. I will add all files in the components folder.
 
 Repository Link : https://github.com/Sasidharveerni/news-app
+
+
+Step 1: Using command -> git clone https://github.com/Sasidharveerni/news-app
+Step 2 : open terminal -> cd news-app
+Step 3 : npm install
+Step 4 : go to newsdata.io -> register -> get api key
+Step 5 : go to LandingPage.jsx -> replace api key with your api key
+
+Step 6 : just run it -> npm run dev
+Step 7 : push your current code into your github
+-> create one empty repository in github & go to project folder terminal.
+ -> git init
+ -> git add .
+ -> git remote add origin "your_repo_link"
+ -> git branch -M Main
+ -> git commit -m "some_msg"
+ -> git push origin main
+Step 8 : go to vercel website -> connect with it your github.
+
+
