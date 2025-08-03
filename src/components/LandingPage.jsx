@@ -6,7 +6,7 @@ function LandingPage() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch('https://newsdata.io/api/1/news?apikey=pub_864869fc549ab288d8d2099c0d898b6018023&q=India ')
+    fetch('https://newsapi.org/v2/top-headlines?country=us&apiKey=7e8b91d76c3a4b8588d5d34ca1b4f5d2')
       .then(response => response.json())
       .then(data => {
         console.log(data.results)
